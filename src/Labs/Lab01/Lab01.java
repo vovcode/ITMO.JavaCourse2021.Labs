@@ -12,8 +12,6 @@ public class Lab01 {
         getIntsFromInput5();
         numOddOrEven6();
     }
-
-
     public static void saySomeStuff1(){
         System.out.println("Я");
         System.out.println("хорошо");
