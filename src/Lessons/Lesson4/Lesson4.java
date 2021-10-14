@@ -57,7 +57,7 @@ public class Lesson4 {
         System.out.println(str3);
 
         int number = 100;
-        String text3 ="this is some text";
+        String text3 = "this is some text";
         String result = text3 + number + 50;
         System.out.println(result);
 
@@ -75,9 +75,9 @@ public class Lesson4 {
         System.out.println(first.equals(strFirst));
         System.out.println(second.equalsIgnoreCase(strSecond));
 
-        String justSomeText ="simple text string";
+        String justSomeText = "simple text string";
 
-        char[] symbols ={'A', 'B', 'C','D','E'};
+        char[] symbols = {'A', 'B', 'C', 'D', 'E'};
         System.out.println(symbols);
         String strOut = String.valueOf(symbols); //Перевод char в string
         System.out.println(strOut);
@@ -85,7 +85,7 @@ public class Lesson4 {
         char[] charsFromString = strOut.toCharArray();//Перевод string в char
         System.out.println(charsFromString);
 
-        String[] parts = justSomeText.split (" "); //Разбиение массива на строки по regex
+        String[] parts = justSomeText.split(" "); //Разбиение массива на строки по regex
         System.out.println(Arrays.toString((parts)));
 
         for (int i = 0; i < justSomeText.length(); i++) {
@@ -94,17 +94,52 @@ public class Lesson4 {
 
         System.out.printf("My name is %s. I was born in %d %d", "Mike", 1998, 1998);
         int age = 35;
-        char init ='M';
-        String strSomeString = String.format("\nMy age is %d %c", age,init);
+        char init = 'M';
+        String strSomeString = String.format("\nMy age is %d %c", age, init);
         System.out.println(strSomeString);
 
         StringBuilder emptystr = new StringBuilder("java!");
         System.out.println(emptystr.length());
         System.out.println(emptystr.charAt(4));
-        emptystr.setCharAt(0,'J');
+        emptystr.setCharAt(0, 'J');
         emptystr.deleteCharAt(4);
         System.out.println(emptystr);
-        emptystr.append("12345" + (50+50));
+        emptystr.append("12345" + (50 + 50));
         System.out.println(emptystr);
+        emptystr
+                .append("kotlin\n")
+                .append("go\n");
+        System.out.println(emptystr);
+
+        StringBuilder stringBuilder = new StringBuilder("java!");
+        stringBuilder.insert(4, " programmer");
+        System.out.println(stringBuilder);
+        stringBuilder.replace(0, 4, "C#");
+        System.out.println(stringBuilder);
+        stringBuilder.delete(0, 3);
+        System.out.println(stringBuilder);
+        stringBuilder.reverse();
+        System.out.println(stringBuilder);
+        System.out.println(stringBuilder.capacity());
+
+        BubbleSort();
+    }
+
+    // Bubble sort
+    public static void BubbleSort() {
+        String strings[] = {"I", "still", "learning", "java", "language"};
+        String temp;
+        System.out.println("Строки по порядку:");
+        for (int j = 0; j < strings.length; j++) {
+            for (int i = j + 1; i < strings.length; i++) {
+                // сравнение строк рядом
+                if (strings[i].compareTo(strings[j]) < 0) {
+                    temp = strings[j];
+                    strings[j] = strings[i];
+                    strings[i] = temp;
+                }
+            }
+            System.out.println(strings[j]);
+        }
     }
 }
