@@ -5,12 +5,24 @@ import java.util.Scanner;
 public class Lab01 {
 
     public static void main(String[] args) {
+        System.out.println("Начало задания 1");
         saySomeStuff();
+        System.out.println("Конец задания 1\n");
+        System.out.println("Начало задания 2");
         solveMyMath();
+        System.out.println("Конец задания 2\n");
+        System.out.println("Начало задания 3");
         solveMyMath2();
+        System.out.println("Конец задания 3\n");
+        System.out.println("Начало задания 4");
         multiplyNums();
+        System.out.println("Конец задания 4\n");
+        System.out.println("Начало задания 5");
         getIntsFromInput();
+        System.out.println("Конец задания 5\n");
+        System.out.println("Начало задания 6");
         numOddOrEven();
+        System.out.println("Конец задания 6\n");
     }
 
     public static void saySomeStuff() {
