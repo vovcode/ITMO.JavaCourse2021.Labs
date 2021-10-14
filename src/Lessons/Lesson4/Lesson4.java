@@ -98,6 +98,13 @@ public class Lesson4 {
         String strSomeString = String.format("\nMy age is %d %c", age,init);
         System.out.println(strSomeString);
 
-
+        StringBuilder emptystr = new StringBuilder("java!");
+        System.out.println(emptystr.length());
+        System.out.println(emptystr.charAt(4));
+        emptystr.setCharAt(0,'J');
+        emptystr.deleteCharAt(4);
+        System.out.println(emptystr);
+        emptystr.append("12345" + (50+50));
+        System.out.println(emptystr);
     }
 }
