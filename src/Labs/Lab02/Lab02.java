@@ -131,9 +131,8 @@ public class Lab02 {
         Random random = new Random();
         int randomLength = random.nextInt(100) + 2;
         int[] arrayToCheck = new int[randomLength];
-
-        for (int i = arrayToCheck[0]; i < (arrayToCheck.length - 1); i++) {
-            Random random2 = new Random();
+        Random random2 = new Random();
+        for (int i = 0; i < arrayToCheck.length; i++) {
             int randomNumber = random2.nextInt(11);//Генерация рандомного числа от 0 до 10
             arrayToCheck[i] = randomNumber;
         }
