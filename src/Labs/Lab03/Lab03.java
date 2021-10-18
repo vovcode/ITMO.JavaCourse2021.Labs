@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Lab03 {
     public static void main(String[] args) {
-        System.out.println("Начало задания 1");
+        /*System.out.println("Начало задания 1");
         checkArrayIfSorted(printArrayInput(getArrayLengthInput()));
         System.out.println("Конец задания 1\n");
         System.out.println("Начало задания 2");
@@ -17,8 +17,9 @@ public class Lab03 {
         System.out.println("Конец задания 3\n");
         System.out.println("Конец задания 4\n");
         //findFirstUniqueElement(printArrayInput(getArrayLengthInput()));
-        System.out.println("Конец задания 4\n");
-//        TestingArray();
+        System.out.println("Конец задания 4\n");*/
+//        TestingArray2();
+        TestingArray();
 
     }
 
@@ -57,7 +58,8 @@ public class Lab03 {
             System.out.println("Please, try again");
         }
     }
-    public static void ArrayInputPrint(){
+
+    public static void ArrayInputPrint() {
         int arrayLength;
         Scanner sc3 = new Scanner(System.in);
         System.out.println("Array length: ");
@@ -70,25 +72,34 @@ public class Lab03 {
         }
         System.out.println("Result: " + Arrays.toString(arrayToPrint));
     }
-   /* public static void findFirstUniqueElement(int[] arrayToCheck){
-        //Смотрит есть ли дубликаты в массиве, если нет, то сохраняет, если есть несколько, то берет первое значение
-        int uniqueElement = 0;
+
+    /* public static void findFirstUniqueElement(int[] arrayToCheck){
+         //Смотрит есть ли дубликаты в массиве, если нет, то сохраняет, если есть несколько, то берет первое значение
+         int uniqueElement = 0;
+         for (int i = 0; i < arrayToCheck.length; i++) {
+             if (arrayToCheck[i] != arrayToCheck[i + 1]){
+                 uniqueElement = arrayToCheck[i];
+                 break;
+             }
+             else if(arrayToCheck[i] == arrayToCheck[i + 1]){
+                 //do nothing
+             }
+         }
+         System.out.println("Первое уникальное число в массиве: " + uniqueElement);
+     }*/
+    public static void TestingArray2() {
+        int[] arrayToCheck = new int[]{1, 2, 2, 3, 4, 4, 5, 6, 7, 8};
         for (int i = 0; i < arrayToCheck.length; i++) {
-            if (arrayToCheck[i] != arrayToCheck[i + 1]){
-                uniqueElement = arrayToCheck[i];
-                break;
-            }
-            else if(arrayToCheck[i] == arrayToCheck[i + 1]){
-                //do nothing
-            }
-        }
-        System.out.println("Первое уникальное число в массиве: " + uniqueElement);
-    }*/
-    public static void TestingArray(){
-        int[] arrayToCheck = new int []{1,2,2,3,4,4,5,6,7,8};
-        for (int i = 0; i < arrayToCheck.length; i++){
             // Попробовать foreach loop, вложенный for
         }
         System.out.println(Arrays.toString(arrayToCheck));
+    }
+
+    public static void TestingArray() {
+        int[] array = new int[]{1, 2, 2, 3, 4, 4, 5, 6, 7, 8};
+        for (int i : array) {
+            array[i]= array[i]*2;
+        }
+        System.out.println(Arrays.toString(array));
     }
 }
