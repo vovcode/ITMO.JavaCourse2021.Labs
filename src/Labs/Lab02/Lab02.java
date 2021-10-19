@@ -124,7 +124,6 @@ public class Lab02 {
     }
 
     public static int[] randomSizeAndFillArray() { //Метод возвращает рандомное значение
-
         Random random = new Random();
         int randomLength = random.nextInt(100) + 2;
         int[] arrayToCheck = new int[randomLength];
