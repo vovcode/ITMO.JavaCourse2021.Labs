@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Lab03 {
     public static void main(String[] args) {
-       /* System.out.println("Начало задания 1");
+        System.out.println("Начало задания 1");
         checkArrayIfSorted(printArrayInput(getArrayLengthInput()));
         System.out.println("Конец задания 1\n");
         System.out.println("Начало задания 2");
@@ -14,7 +14,7 @@ public class Lab03 {
         System.out.println("Конец задания 2\n");
         System.out.println("Начало задания 3");
         swapArrayLimitValues(printArrayInput(getArrayLengthInput()));
-        System.out.println("Конец задания 3\n");*/
+        System.out.println("Конец задания 3\n");
         /*System.out.println("Конец задания 4\n");
         int[] array = new int[]{1, 1, 2, 4, 3, 3, 5, 5, 6};
         findFirstUniqueElement(array);
