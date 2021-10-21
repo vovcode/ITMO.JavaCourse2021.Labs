@@ -112,7 +112,7 @@ public class Lab02 {
     public static void arrayContainsValue(int[] arrayToCheck) {
         int containCount = 0;//Переменная, равная количеству случаев включения в массив значения "1" или "3"
         for (int i : arrayToCheck) {
-            if ((arrayToCheck[i] == 1) || (arrayToCheck[i] == 3)) {
+            if ((i == 1) || (i == 3)) {
                 containCount++;
             }
         }
