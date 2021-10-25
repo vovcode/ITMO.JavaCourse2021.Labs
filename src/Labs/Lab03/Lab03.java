@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Lab03 {
     public static void main(String[] args) {
-        /*System.out.println("Начало задания 1");
+        System.out.println("Начало задания 1");
         checkArrayIfSorted(printArrayInput(getArrayLengthInput()));
         System.out.println("Конец задания 1\n");
         System.out.println("Начало задания 2");
@@ -15,11 +15,18 @@ public class Lab03 {
         System.out.println("Конец задания 2\n");
         System.out.println("Начало задания 3");
         swapArrayLimitValues(printArrayInput(getArrayLengthInput()));
-        System.out.println("Конец задания 3\n");*/
+        System.out.println("Конец задания 3\n");
         System.out.println("Начало задания 4\n");
         int[] array = new int[]{1,1,2,3,3};
         System.out.println(findFirstUniqueElement(array));
         System.out.println("Конец задания 4\n");
+        System.out.println("Начало задания 5\n");
+        System.out.println("Введите N-ое число Фибоначчи: ");
+        Scanner in = new Scanner(System.in);
+        int nValue = in.nextInt();
+        System.out.println("N-ое значение Фибоначчи равно " + getFibonacchiNumberValue(nValue));
+        System.out.println("Конец задания 5\n");
+
     }
 
     public static int getArrayLengthInput() {
@@ -93,5 +100,18 @@ public class Lab03 {
                 return arrayToCheck[i];
         }
         return -1;
+    }
+
+    public static int getFibonacchiNumberValue(int N) {
+        //0 1 1 2 3
+        int num1 = 0;
+        int num2 = 1;
+        int sumOfTwoNumbers;
+        for (int i = 0; i < N; i++) {
+            sumOfTwoNumbers = num1 + num2;
+            num1 = num2;
+            num2 = sumOfTwoNumbers;
+        }
+        return num1;
     }
 }
