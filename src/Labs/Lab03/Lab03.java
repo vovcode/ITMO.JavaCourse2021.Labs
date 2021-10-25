@@ -1,12 +1,13 @@
 package Labs.Lab03;
 
+import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Lab03 {
     public static void main(String[] args) {
-        System.out.println("Начало задания 1");
+        /*System.out.println("Начало задания 1");
         checkArrayIfSorted(printArrayInput(getArrayLengthInput()));
         System.out.println("Конец задания 1\n");
         System.out.println("Начало задания 2");
@@ -14,11 +15,11 @@ public class Lab03 {
         System.out.println("Конец задания 2\n");
         System.out.println("Начало задания 3");
         swapArrayLimitValues(printArrayInput(getArrayLengthInput()));
-        System.out.println("Конец задания 3\n");
-        /*System.out.println("Конец задания 4\n");
-        int[] array = new int[]{1, 1, 2, 4, 3, 3, 5, 5, 6};
-        findFirstUniqueElement(array);
-        System.out.println("Конец задания 4\n");*/
+        System.out.println("Конец задания 3\n");*/
+        System.out.println("Конец задания 4\n");
+        int[] array = new int[]{1,1,2,3,3};
+        System.out.println(findFirstUniqueElement(array));
+        System.out.println("Конец задания 4\n");
     }
 
     public static int getArrayLengthInput() {
@@ -82,23 +83,15 @@ public class Lab03 {
         System.out.println("Array 2: " + Arrays.toString(arrayToCheck));
     }
 
-    /*public static void findFirstUniqueElement(int[] arrayToCheck) {
-        //Смотрит есть ли дубликаты в массиве, если нет, то сохраняет, если есть несколько, то берет первое значение
-        //не работает, сделать через сортировку
-        int uniqueElement = 0;
-        int prevElement = 0;
-        int nextElement = 0;
-        for (int i: arrayToCheck){
-            prevElement = arrayToCheck[i];
+    public static int findFirstUniqueElement(int[] arrayToCheck) {
+        for (int i = 0; i < arrayToCheck.length; i++) {
+            int j;
+            for (j = 0; j < arrayToCheck.length; j++)
+                if (i != j && arrayToCheck[i] == arrayToCheck[j])
+                    break;
+            if (j == arrayToCheck.length)
+                return arrayToCheck[i];
         }
-        for (int j = 0;j < arrayToCheck.length;j++) {
-            nextElement = arrayToCheck[j+1];
-            if (prevElement != nextElement ){
-                uniqueElement = prevElement;
-                break;
-            }
-        }
-        System.out.println(uniqueElement);
-    }*/
-
+        return -1;
+    }
 }
