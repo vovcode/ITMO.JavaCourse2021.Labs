@@ -16,7 +16,7 @@ public class Lab03 {
         System.out.println("Начало задания 3");
         swapArrayLimitValues(printArrayInput(getArrayLengthInput()));
         System.out.println("Конец задания 3\n");*/
-        System.out.println("Конец задания 4\n");
+        System.out.println("Начало задания 4\n");
         int[] array = new int[]{1,1,2,3,3};
         System.out.println(findFirstUniqueElement(array));
         System.out.println("Конец задания 4\n");
