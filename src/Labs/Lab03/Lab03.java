@@ -24,7 +24,7 @@ public class Lab03 {
         System.out.println("Введите N-ое число Фибоначчи: ");
         Scanner in = new Scanner(System.in);
         int nValue = in.nextInt();
-        System.out.println("N-ое значение Фибоначчи равно " + getFibonacchiNumberValue(nValue));
+        System.out.println("N-ое значение Фибоначчи равно " + getFibonacciNumberValue(nValue));
         System.out.println("Конец задания 5\n");
 
     }
@@ -102,7 +102,7 @@ public class Lab03 {
         return -1;
     }
 
-    public static int getFibonacchiNumberValue(int N) {
+    public static int getFibonacciNumberValue(int N) {
         //0 1 1 2 3
         int num1 = 0;
         int num2 = 1;
