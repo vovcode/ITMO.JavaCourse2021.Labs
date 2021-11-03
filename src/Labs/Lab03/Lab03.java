@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Lab03 {
     public static void main(String[] args) {
-        /*System.out.println("Начало задания 1");
+        System.out.println("Начало задания 1");
         checkArrayIfSorted(printArrayInput(getArrayLengthInput()));
         System.out.println("Конец задания 1\n");
         System.out.println("Начало задания 2");
@@ -25,7 +25,7 @@ public class Lab03 {
         Scanner in = new Scanner(System.in);
         int nValue = in.nextInt();
         System.out.println("N-ое значение Фибоначчи равно " + getFibonacciNumberValue(nValue));
-        System.out.println("Конец задания 5\n");*/
+        System.out.println("Конец задания 5\n");
         System.out.println("Начало задания 6\n");
         int [] arrayToSort = Arrays.copyOf(randomSizeAndFillArray(),randomSizeAndFillArray().length);
         System.out.println("Массив до сортировки: " + Arrays.toString(arrayToSort));
