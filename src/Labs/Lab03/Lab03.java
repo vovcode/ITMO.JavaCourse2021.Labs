@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Lab03 {
     public static void main(String[] args) {
-        System.out.println("Начало задания 1");
+        /*System.out.println("Начало задания 1");
         checkArrayIfSorted(printArrayInput(getArrayLengthInput()));
         System.out.println("Конец задания 1\n");
         System.out.println("Начало задания 2");
@@ -25,7 +25,14 @@ public class Lab03 {
         Scanner in = new Scanner(System.in);
         int nValue = in.nextInt();
         System.out.println("N-ое значение Фибоначчи равно " + getFibonacciNumberValue(nValue));
-        System.out.println("Конец задания 5\n");
+        System.out.println("Конец задания 5\n");*/
+        System.out.println("Начало задания 6\n");
+        int [] arrayToSort = Arrays.copyOf(randomSizeAndFillArray(),randomSizeAndFillArray().length);
+        System.out.println("Массив до сортировки: " + Arrays.toString(arrayToSort));
+        mergeSort(arrayToSort);
+        System.out.println("Массив после сортировки слиянием: " + Arrays.toString(arrayToSort));
+        System.out.println("Конец задания 6\n");
+
 
     }
 
@@ -103,7 +110,6 @@ public class Lab03 {
     }
 
     public static int getFibonacciNumberValue(int N) {
-        //0 1 1 2 3
         int num1 = 0;
         int num2 = 1;
         int sumOfTwoNumbers;
@@ -113,5 +119,57 @@ public class Lab03 {
             num2 = sumOfTwoNumbers;
         }
         return num1;
+    }
+    public static int[] randomSizeAndFillArray() { //Метод возвращает рандомное значение
+        Random random = new Random();
+        int randomLength = random.nextInt(100) + 2;
+        int[] arrayToCheck = new int[randomLength];
+        Random random2 = new Random();
+        for (int i = 0; i < arrayToCheck.length; i++) {
+            int randomNumber = random2.nextInt(11);//Генерация рандомного числа от 0 до 10
+            arrayToCheck[i] = randomNumber;
+        }
+        return arrayToCheck;
+    }
+
+    public static void mergeSort(int[] array) {
+        if (array.length < 2) {
+            return;
+        }
+        int middleIndex = Math.round(array.length / 2);
+        int[] leftArray = Arrays.copyOfRange(array, 0, middleIndex);
+        int[] rightArray = Arrays.copyOfRange(array, middleIndex, array.length);
+
+        mergeSort(leftArray);
+        mergeSort(rightArray);
+        merge(leftArray, rightArray, array);
+    }
+    public static void merge(int[] leftArray, int[] rightArray, int[] array) { // leftArray, rightArray - уже отсортированные массивы
+
+        int leftSize = array.length / 2;
+        int rightSize = array.length - leftSize;
+        int i = 0, l = 0, r = 0; //i - индекс позиции внутри оригинального массива, l - внутри левого массива, r - внутри правого массива
+
+        while (l < leftSize && r < rightSize) {
+            if (leftArray[l] < rightArray[r]) {
+                array[i] = leftArray[l];
+                i++;
+                l++;
+            } else {
+                array[i] = rightArray[r];
+                i++;
+                r++;
+            }
+        }
+        while (l < leftSize) {
+            array[i] = leftArray[l];
+            i++;
+            l++;
+        }
+        while (r < rightSize) {
+            array[i] = rightArray[r];
+            i++;
+            r++;
+        }
     }
 }
